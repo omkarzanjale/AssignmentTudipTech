@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
     
     var users = [User]()
 
-    @IBOutlet weak var usersTableViiew: UITableView!
+    @IBOutlet weak var usersTableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var noInternetLogo: UIImageView!
     
@@ -19,8 +19,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         activityIndicator.startAnimating()
         noInternetLogo.isHidden = true
-        usersTableViiew.tableFooterView = UIView()
-        self.usersTableViiew.isHidden = true
+        usersTableView.tableFooterView = UIView()
+        self.usersTableView.isHidden = true
         apiData()
     }
     
@@ -36,8 +36,8 @@ class HomeViewController: UIViewController {
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
                 self.activityIndicator.hidesWhenStopped = true
-                self.usersTableViiew.isHidden = false
-                self.usersTableViiew.reloadData()
+                self.usersTableView.isHidden = false
+                self.usersTableView.reloadData()
             }
         }
 
@@ -52,7 +52,7 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let user = users[indexPath.row]
-        if let cell = usersTableViiew.dequeueReusableCell(withIdentifier: "UserTableViewCell") as? UserTableViewCell {
+        if let cell = usersTableView.dequeueReusableCell(withIdentifier: "UserTableViewCell") as? UserTableViewCell {
             cell.nameLabel.text = user.name
             cell.emailLabel.text = user.email
             cell.companyNameLabel.text = user.company.name

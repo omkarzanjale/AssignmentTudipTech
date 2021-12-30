@@ -64,6 +64,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveBtnAction:" destination="C4X-Gn-hj2" eventType="touchUpInside" id="jyf-K1-baE"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZq-bx-DfZ">
                                 <rect key="frame" x="189" y="258" width="205" height="39"/>
@@ -114,6 +117,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="bxT-p0-xYF"/>
+                    <connections>
+                        <outlet property="addressTextField" destination="wPj-tA-CqG" id="Gsf-n8-SXC"/>
+                        <outlet property="emailTextField" destination="Xbw-p1-Q3C" id="gkB-wd-Lue"/>
+                        <outlet property="firstNameTextField" destination="OZq-bx-DfZ" id="ojG-GY-gEp"/>
+                        <outlet property="lastNameTextField" destination="JQ5-LL-kNw" id="a7M-VX-NYM"/>
+                        <outlet property="phoneNumberTextField" destination="SmQ-Td-QGQ" id="NtN-uD-6S4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="92F-98-x2f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -231,7 +241,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="iXv-QP-gzV" id="gKb-UF-Dv3"/>
                         <outlet property="noInternetLogo" destination="i91-BL-eUV" id="qQr-uP-YM2"/>
-                        <outlet property="usersTableViiew" destination="WLU-tC-hSH" id="Qcw-rg-4N9"/>
+                        <outlet property="usersTableView" destination="WLU-tC-hSH" id="Qcw-rg-4N9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gg-n9-8RF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
